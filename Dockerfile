@@ -8,7 +8,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular app
-RUN npm run build -- --prod
+RUN export NODE_OPTIONS='--openssl-legacy-provider' && npm run build -- --prod
 
 # Stage 2: Serve the production build using Nginx
 FROM nginx:alpine
