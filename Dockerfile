@@ -14,7 +14,8 @@ RUN npm run build --prod
 FROM nginx:alpine
 COPY nginx.conf  /etc/nginx/conf.d/default.conf
 # Copy the build artifacts from the previous stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist/crudtuto-Front /usr/share/nginx/html
+
 
 # Expose port 80 (the default port for HTTP traffic)
 EXPOSE 80
