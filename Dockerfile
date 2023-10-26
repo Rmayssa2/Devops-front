@@ -13,6 +13,7 @@ RUN npm run build --prod
 # Stage 2: Serve the production build using Nginx
 FROM nginx:alpine
 COPY nginx.conf  /etc/nginx/conf.d/default.conf
+RUN rm -rf ./*
 # Copy the build artifacts from the previous stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
