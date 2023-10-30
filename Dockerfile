@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy the entire Angular project
+# Copy the entire Angular project here
 COPY . .
 
 # Build the Angular appedit 
