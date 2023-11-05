@@ -7,7 +7,7 @@ RUN npm install
 # Copy the entire Angular project he
 COPY . .
 
-# Build the Angular appedit 
+# Build the Angular 
 RUN npm run build --prod
 
 # Stage 2: Serve the production build using Nginx
