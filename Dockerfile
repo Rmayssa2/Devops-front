@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy the entire Angular projet
+# Copy the entire Angular proje
 COPY . .
 
 # Build the Angular 
