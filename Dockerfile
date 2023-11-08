@@ -10,7 +10,7 @@ COPY . .
 # Build the Angular 
 RUN npm run build --prod
 
-# Stage 2: Serve the production build using Nginx
+# Stage 2: Serve the production build using Ngin
 FROM nginx:alpine
 COPY nginx.conf  /etc/nginx/conf.d/default.conf
 # Copy the build artifacts from the previous stage
